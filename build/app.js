@@ -5,14 +5,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const config_1 = __importDefault(require("config"));
-const index_1 = require("./graphQL/index");
+const schema_1 = require("./graphQL/schema");
 const express_graphql_1 = require("express-graphql");
 const db_1 = require("./start/db");
 (0, db_1.createConnection)();
 const app = (0, express_1.default)();
 const PORT = config_1.default.get('PORT') || 3000;
 app.use('/graphql', (0, express_graphql_1.graphqlHTTP)({
-    schema: index_1.schema,
+    schema: schema_1.schema,
     graphiql: true
 }));
 app.listen(PORT, () => {

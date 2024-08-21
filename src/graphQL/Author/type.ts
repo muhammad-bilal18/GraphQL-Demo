@@ -1,5 +1,5 @@
-import { GraphQLObjectType, GraphQLInt, GraphQLNonNull, GraphQLString, GraphQLList, GraphQLID } from 'graphql';
-import { BookType } from './bookSchema';
+import { GraphQLObjectType, GraphQLNonNull, GraphQLString, GraphQLList, GraphQLID } from 'graphql';
+import { BookType } from '../Book/type';
 import { Book } from '../../models/book';
 
 export const AuthorType: GraphQLObjectType = new GraphQLObjectType({

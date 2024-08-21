@@ -1,6 +1,6 @@
 import express from 'express';
 import config from 'config';
-import { schema } from './graphQL/index';
+import { schema } from './graphQL/schema';
 import { graphqlHTTP } from 'express-graphql';
 import { createConnection } from './start/db';
 
